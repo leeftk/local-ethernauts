@@ -27,7 +27,7 @@
   "dependencies": {
     "@typechain/ethers-v5": "^9.0.0",
     "@typechain/hardhat": "^5.0.0",
-    "hardhat": "^2.9.1",
+    "hardhat": "^2.13.0",
     "typechain": "^7.0.1"
   }
 }
