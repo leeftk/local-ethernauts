@@ -9,7 +9,7 @@ describe("Attacking Reentrance", function () {
     const Victim = await ethers.getContractFactory("Reentrance");
     victim = await Victim.deploy({ value: 5 });
     const Attacker = await ethers.getContractFactory("AttackingReentrance");
-    attacker = await Attacker.deploy(victim.address, { value: 1 });
+    attacker = await Attacker.deploy(victim.address, { value: 1});
   });
 
   // Get this to pass!

